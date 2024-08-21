@@ -3,7 +3,7 @@
 
 
 .mf_big{
-    font-size: 3.75rem;
+    font-size: 3rem;
 }
 .mf_nom{
     font-size: 3.375rem;
@@ -45,9 +45,7 @@
 
 
 
-#contents{
-    
-}
+
 
 .mt{
     margin: 100px 0 0;
@@ -80,6 +78,10 @@ div.btn{
         z-index: 1;
         transform: translate(-50%);
     }
+    .box{
+        width: 80%;
+        margin: 0 auto;
+    }
     .swiper-container {
         width:100%; 
         height: 100vh;
@@ -105,6 +107,7 @@ div.btn{
         bottom: 27%;
         transform: translate(-50%,-70%);
         z-index: 50;
+        display: none;
         .line{
             width: 2px;
             height: 100px;
@@ -153,8 +156,8 @@ div.btn{
         .bg{
             width: 100%;
             height: 100vh;
-             transition: all 2.5s ease-in-out;
-            transform: scale(1.5);
+            transition: transform 6s ease-in-out;
+            transform: scale(1.3);
             overflow: hidden;
         }
         &.con1{
@@ -175,16 +178,60 @@ div.btn{
             }
             
         }
+        &.con4{
+            .bg{
+                background: url("../img/main_slide04.jpg")no-repeat rgba(0,0,0,.3) center / cover;
+            }
+            .txt{
+                color: #fff;
+                text-shadow: 0px 1px 1px #000;
+            }
+            p{
+                text-shadow: 0px 1px 1px #000;
+            }
+            
+        }
+        &.con5{
+            .bg{
+                background: url("../img/main_slide05.jpg")no-repeat rgba(0,0,0,.3) center / cover;
+            }
+            .txt{
+                color: #fff;
+                text-shadow: 0px 1px 1px #000;
+            }
+            p{
+                text-shadow: 0px 1px 1px #000;
+            }
+            
+        }
+      
         .txt{
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
             height: 100%;
             display: flex;
             align-items: center;
+            z-index: 50;
+            .tbox{
+                margin: -8% 50% 0 0;
+            }
             p{
-                margin: 30px 0 0;
+                &.first{
+                    margin: 30px 0 0;
+                }
+            }
+            strong{
+                line-height: 1.2;
+                span{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    letter-spacing: -0.025rem;
+                    display: block;
+                    margin: 5px 0 0;
+                }
             }
         }
     }
@@ -202,7 +249,7 @@ div.btn{
     .swiper-pagination-bullets.swiper-pagination-horizontal, 
     .swiper-pagination-custom, .swiper-pagination-fraction{
         position: absolute;
-        bottom: 30%;
+        bottom: 22%;
         left: auto;
         top: auto;
         width: auto;
@@ -249,7 +296,7 @@ div.btn{
         
         b {  
             animation-name: countingBar;
-            animation-duration: 3s;//autopaly 시간과 맞춰주기
+            animation-duration: 5s;//autopaly 시간과 맞춰주기
             animation-timing-function: ease-in;
             animation-iteration-count: 1;
             animation-direction: alternate ;
@@ -273,10 +320,9 @@ div.btn{
     position: absolute;
     top: 0;
     right: 50%;
-    width: 90%;
+    width: 80%;
     height: 100%;
     z-index: 1;
-    max-width: 1700px;
     transform: translate(50%);
     display: flex;
     align-items: center;
@@ -284,6 +330,53 @@ div.btn{
     .table_area{
 
         width: 50%;
+        .arr{
+            
+            position: absolute;
+            right: 0;
+           
+            .line{
+                width: 2px;
+                height: 100px;
+                background: #707070;
+            }
+            .swiper-button-prev{
+                left: auto;
+                right: 34px;
+                width: 35px;
+                height: 35px;
+                top: 25px;
+                background: #fff;
+                &:after{
+                    font-size: 23px;
+                     color: #707070;
+                }
+            }
+      
+            .swiper-button-next{
+                left: auto;
+                right: 0;
+                width: 35px;
+                height: 35px;
+                top: 25px;
+                background: #fff;
+                &:before{
+                    transform: translate(0,-50%);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 2px;
+                    height: 23px;
+                    background: #ddd;
+                }
+                &:after{
+                    font-size: 23px;
+                     color: #707070;
+                }
+            }
+        }
         .notice_wrap{
             width: 50%;
             float: right;
@@ -331,7 +424,11 @@ div.btn{
 
                     }
                     a{
-                        
+                        &:hover{
+                            b{
+                                transform: rotate(180deg);
+                            }
+                        }
                         span{
                             display: block;
                             width: 100%;
@@ -343,10 +440,12 @@ div.btn{
                         }
                         b{
                             width: 30px;
+                            min-width: 30px;
                             height: 30px;
                             background: #F8F8F8;
                             border-radius: 100%;
                             position: relative;
+                            transition: transform 500ms ease-in-out;
                             &::before{
                                 content:"";
                                 display: block;
@@ -357,6 +456,7 @@ div.btn{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%,-50%);
+                                transition: transform 500ms ease-in-out;
                             }
                             &::after{
                                 content:"";
@@ -368,6 +468,7 @@ div.btn{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%,-50%);
+                                transition: transform 500ms ease-in-out;
                             }
                         }
                     }
@@ -393,9 +494,11 @@ div.btn{
                 a{
                     font-size: 0.875rem;
                     background: #fff;
-                    display: inline-block;
+         
                     padding: 5px 20px;
                     border-radius: 100px;
+                    margin: 0 10px 0 0;
+                    display: flex;
                     i{
                         margin: 0 0 0 15px;
                     }
@@ -405,17 +508,28 @@ div.btn{
         .togo{
             background: #8DCFCF;
             width: 50%;
-            padding: 25px;
+            padding: 28px 25px;
             color: #ffff;
+            height: 208px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             p{
                 
                 margin: 5px 0 0;
+                display:none;
             }
         }
         .joinus{
             padding: 28px 26px;
             width: 50%;
+            height: 208px;
             background: url("../img/join_bg.jpg")no-repeat center/cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: column;
             h3{
                 font-weight: 500;
                 b{
@@ -428,6 +542,7 @@ div.btn{
                 font-size: 0.875rem;
                 color: #fff;
                 margin: 5px 0 0;
+                display: none;
             }
         }
     }
@@ -442,10 +557,7 @@ div.btn{
             display: none;
         }
     }
-    .container{
-       
-        
-    }
+    
     .box{
         display: flex;
         justify-content: space-between;
@@ -463,11 +575,22 @@ div.btn{
                 line-height: 1.7;
                 margin: 50px 0;
             }
+            .btn{
+                display: none;
+            }
         }
         .img_box{
             text-align: center;
            width: 50%;
            position: relative;
+           figure{
+                .pc_show{
+                    display: block;
+                }
+                .mo_show{
+                    display: none;
+                }
+           }
            .rain {
             position: absolute;
             width: 100%;
@@ -483,7 +606,7 @@ div.btn{
             height: 22px;
             right: 0;
             top: 0;
-            background-image: url("../img/rain01.png");
+            background-image: url("../img/rain01.png"); 
             background-size:5px 22px;
             animation: raindrop 1s linear infinite; 
           }
@@ -493,7 +616,7 @@ div.btn{
             height: 22px;
             right: 30%;
             top: 0;
-            background-image: url("../img/rain02.png");
+            background-image: url("../img/rain02.png"); 
             background-size:5px 22px;
             animation: raindrop 2s linear infinite; 
           }
@@ -502,7 +625,7 @@ div.btn{
             width: 5px;
             height: 22px;
             right: 65%;
-            background-image: url("../img/rain03.png"); 
+            background-image: url("../img/rain03.png");
             background-size:5px 22px;
             animation: raindrop 3s linear infinite; 
           }
@@ -531,7 +654,7 @@ div.btn{
             height: 22px;
             left: 0%;
             top: 0%;
-            background-image: url("../img/rain01.png"); 
+            background-image: url("../img/rain01.png");
             background-size:5px 22px;
             animation: raindrop 2s linear infinite;
           }
@@ -541,7 +664,7 @@ div.btn{
             height: 22px;
             left: 20%;
             top: 30%;
-            background-image: url("../img/rain02.png"); 
+            background-image: url("../img/rain02.png");
             background-size:5px 22px;
             animation: raindrop 2s linear infinite; 
           }
@@ -553,7 +676,7 @@ div.btn{
             top: 0%;
             background-image: url("../img/rain03.png"); 
             background-size:5px 22px;
-            animation: raindrop 2s linear infinite; 
+            animation: raindrop 2s linear infinite;
           }
           .icon09 {
             position: absolute;
@@ -648,7 +771,7 @@ div.btn{
         }
         ul{
             display: flex;
-            align-items: center;
+
             margin: 35px 0 0;
             li{
                 margin-right: 5%;
@@ -748,7 +871,7 @@ div.btn{
                 }
             }
             .txt{
-                
+                color: #fff;
                 &:after{
                     background: rgba(193,71,110,.8);
                 }
@@ -794,6 +917,7 @@ div.btn{
                     display: block;
                     color: #707070;
                 }
+                margin: 70px 0 0;
             }
         }
         
@@ -840,6 +964,7 @@ div.btn{
                     opacity: 0;
                     visibility: hidden;
                     transition: all .5s ease-in-out;
+                    text-align: center;
                     a{
                         color: #fff;
                     }
@@ -897,6 +1022,7 @@ div.btn{
                         -webkit-line-clamp: 1;
                         -webkit-box-orient: vertical;
                         margin: 0 5% 0 0;
+                        width: 100%;
                     }
                     .date{
                         width: 120px;
@@ -1004,6 +1130,7 @@ div.btn{
 }
 
 #deps08{
+    display: none;
     ul{
         display: flex;
         justify-content: center;
@@ -1074,13 +1201,9 @@ div.btn{
         .arr{
             bottom: 15%;
         }
+ 
     }
-    #deps03 {
-        .box{
-            margin-left: 11.3%;
-            margin-right: 11.3%;
-        }
-    }
+   
     #deps04 {
         article{
             max-width: 1720px;
@@ -1105,10 +1228,51 @@ div.btn{
     }
 }
 
+@media (max-width:1720px) {
+    #deps03 {
+        .box {
+            .txt{
+                p{
+                    .none{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
 /* ======================= 1600 =============================*/
 @include breakpoint_desktop_1600 {
     .mf_big{
-        font-size: 3rem;
+        font-size: 2.3rem;
+    }
+    .mf_nom{
+        font-size: 2.375rem;
+    }
+    #deps01 {
+        .swiper-slide {
+            .txt {
+                strong{
+                    
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    #deps02{
+        .table_area{
+            .togo{
+                position: relative;
+                figure{
+                    position: absolute;
+                    top: 30px;
+                    right: 25px;
+                }
+            }
+        }
+
     }
     #deps03{
         .box{
@@ -1129,12 +1293,7 @@ div.btn{
     }
     
 }
-/* ======================= 1440 =============================*/
-@include breakpoint_desktop_1440{
-    
 
-
-}
 
 /* ======================= 1360 =============================*/
 @include breakpoint_desktop_1360{
@@ -1158,12 +1317,26 @@ div.btn{
 
 /* ======================= 1280 =============================*/
 @include breakpoint_desktop_1280{
-    .mf_nom{
-        font-size: 2.5rem;
-    } 
-  
+    
+
     #deps01 {
+        .swiper-container{
+            height: 80vh;
+        }
+        .swiper-slide {
+            height: 80vh;
+            .bg{
+                height: 80vh;
+            }
+            .txt{
+                .tbox{
+                    margin: -150px 0 0;
+                }
+                
+            }
+        }
         .arr {
+            display: none;
             .swiper-button-prev{
                 top: 50px;
                 left: 0;
@@ -1187,8 +1360,11 @@ div.btn{
         margin: 100px auto;
         position: relative;
         .table_area{
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
+   
+            .arr{
+                display: none;
+            }
             .notice_wrap{
                 width: 100%;
                 ul{
@@ -1233,7 +1409,13 @@ div.btn{
             }
         }
     }
-
+    #deps06 {
+        article {
+            .notice_new{
+                padding: 70px 50px 70px;
+            }
+        }
+    }
     #deps07 {
         .job_box{
             flex-direction: column;
@@ -1243,7 +1425,7 @@ div.btn{
                 width: 100px;
                 height: 1px;
                 background: #707070;
-                margin: 35px 0;
+                margin: 15px 0 35px;
             }
             .swiper_area{
                 width: 100%;
@@ -1292,6 +1474,9 @@ div.btn{
 
 /* ======================= 1024 =============================*/
 @include breakpoint_tablet_1024{
+    #deps02{
+        margin: 70px auto 100px;
+    }
     #deps03 {
         width: 90%;
         margin: 0 auto;
@@ -1303,7 +1488,7 @@ div.btn{
         .box{
             flex-direction: column-reverse;
             .txt{
-                margin: 0 0 50px 0;
+                margin: 0 0 70px 0;
                 text-align: center;
                 width: 100%;
             }
@@ -1311,6 +1496,12 @@ div.btn{
                 width: 80%;
                 figure{
                     text-align: center;
+                    .pc_show{
+                        display: none;
+                    }
+                    .mo_show{
+                        display: block;
+                    }
                 }
             }
         }
@@ -1356,10 +1547,15 @@ div.btn{
         }
     }
     #deps06 {
+    
         article {
             .gallery_box{
                 width: 100%;
                 margin: 0 0 50px 0;
+                h3{
+                    padding: 0 70px;
+                    text-align: left;
+                }
             }
             .wid{
                 flex-direction: column;
@@ -1407,17 +1603,23 @@ div.btn{
     }
 }
 
-/* ======================= 991 =============================*/
-@include breakpoint_tablet_991{
-    
-}
 
 
 
 /* ======================= 768 =============================*/
 @include breakpoint_tablet_768{
+    .mt{
+        margin: 50px 0 0;
+    }
+    .mf_nom{
+        font-size: 1.8rem;
+    }
+    .mf_lom{
+        font-size: 1.8rem;
+    }
+    
     #deps02 {
-        margin: 50px auto;
+        
         .table_area {
             .togo{
                 width: auto;
@@ -1434,6 +1636,9 @@ div.btn{
         .box {
             .txt{
                 width: 100%;
+                p{
+                    margin: 30px 0 0px;
+                }
             }
         }
     }
@@ -1452,10 +1657,13 @@ div.btn{
             }
         }
     }
+
     #deps06{
         padding: 50px 0;
+        
     }
     #deps07 {
+        padding: 0 0 50px 0;
         .job_box {
             .swiper_area {
                 .swiper-button-next{
@@ -1517,6 +1725,7 @@ div.btn{
             height: 350px;
         }
     }
+
     #deps06 {
         .swiper_area {
             .swiper{
@@ -1526,17 +1735,24 @@ div.btn{
         article {
             width: 100%;
             float: none;
+           .gallery_box {
+                h3{
+                    padding: 0 10%;
+                }
+           }
             .notice_new {
                 li{
                     padding: 12px 0;
                 }
                 .flex {
-                    padding: 50px;
+                    padding: 50px 10%;
+               
                     h3{
                         margin: 0 0 15px 0;
                     }
                     a{
                         flex-direction: column;
+                        align-items: start;
                         span{
                             margin: 0 0 10px 0;
                         }
@@ -1553,11 +1769,38 @@ div.btn{
         .job_box{
             margin-left: 0;
             margin-right: 0;
-            width: 90%;
+            width: 85%;
             margin: 0 auto;
-        
+            .swiper_area {
+                .swiper-button-next,
+                .swiper-button-prev{
+                    &:after{
+                        font-size: 1.5rem;
+                    }
+                }
+                .swiper-button-prev{
+                    top: 20px;
+                }
+                .swiper-button-next{
+                    bottom: 25px;
+                }
+                .swiper {
+                    .txt{
+                        height: auto;
+                    }
+                }
+                .arr{
+                    height: 120px;
+                }
+                .arr_line{
+                    top: 45px;
+                    right: 9px;
+                    width: 23px;
+                }
+            }
         }
     }
+  
     #deps08 {
         ul{
             li{
@@ -1578,6 +1821,88 @@ div.btn{
 
 /* ======================= 480 =============================*/
 @include breakpoint_mobile_480{
+    .mf_big{
+        font-size: 1.8rem;
+    }
+    .mf_nom{
+        font-size: 1.5rem;
+    }
+    .mf_lom{
+        font-size: 1.8rem;
+    }
+    .mf_som{
+        font-size: 1.5rem;
+    }
+
+    #deps01 {
+        .swiper-pagination-bullet{
+            width: 40px;
+            i{
+                height: 4px;
+            }
+            em{
+                font-size: .8rem;
+            }
+        }
+        
+        .swiper-slide{
+            .txt {
+                .tbox{
+                    margin: -20% 0 0;
+                }
+                strong {
+                    span{
+                        font-size: 1.2rem;
+                    }
+                }
+                p{
+                    &.mf_default{
+                        font-size: .9rem;
+                    }
+                   &.first{
+                        margin: 20px 0 0; 
+                   }
+                   br{
+                    display: none;
+                   }
+                }
+            }
+        }
+     
+    }
+    #deps02 {
+        .table_area {
+            .notice_wrap{
+                .title{
+                    padding: 20px 30px;
+                    .search_icon{
+                        img{
+                            width: 22px;
+                        }
+                    }
+                }
+                ul {
+                    li{
+                        a{
+                            span{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #deps03 {
+        .box {
+            .txt{
+                p{
+                    margin: 20px 0 0px;
+                }
+            }
+        }
+    }
+
     #deps04 {
         .container{
             padding: 50px 0;
@@ -1585,8 +1910,25 @@ div.btn{
         .catebox{
             width: 90%;
         }
+        .news_letter {
+            .txt{
+                p{
+                    margin: 20px 0 50px;
+                }
+            }
+        }
     }
-   
+    #deps06 {
+        .swiper_area {
+            .swiper-button-next,
+            .swiper-button-prev{
+                &:after{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1595,8 +1937,10 @@ div.btn{
     #deps02 {
         .table_area{
             width: auto;
+            
         }
     }
+
     #deps03{
         .box {
             .img_box{
@@ -1605,4 +1949,34 @@ div.btn{
         }
     }
    
+}
+
+
+/* ======================= 360 =============================*/
+@include breakpoint_mobile_360{
+    .mf_big{
+        font-size: 1.5rem;
+    }
+    #deps01 {
+        &:after{
+            height: 35px;
+        }
+        .swiper-horizontal > .swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction{
+            bottom: 10%;
+        }
+        .swiper-slide{
+            .txt{
+                
+                p{
+                    
+                    &.first{
+                        margin: 10px 0 0;
+                    }
+                }
+            }
+        }
+    }
 }
