@@ -145,13 +145,13 @@ div.btn {
   overflow: hidden;
 }
 #deps01 .swiper-slide.con1 .bg {
-  background: url("/img/main_slide02.jpg") no-repeat center/cover;
+  background: url("../img/main_slide02.jpg") no-repeat center/cover;
 }
 #deps01 .swiper-slide.con2 .bg {
-  background: url("/img/main_slide01.jpg") no-repeat center/cover;
+  background: url("../img/main_slide01.jpg") no-repeat center/cover;
 }
 #deps01 .swiper-slide.con3 .bg {
-  background: url("/img/main_slide03.jpg") no-repeat center/cover;
+  background: url("../img/main_slide03.jpg") no-repeat center/cover;
 }
 #deps01 .swiper-slide .txt {
   position: absolute;
@@ -285,7 +285,7 @@ div.btn {
   align-items: center;
 }
 #deps02 .table_area .notice_wrap ul li.notice i {
-  background: url("/img/notice_icon.png") no-repeat 0 2px/21px 21px;
+  background: url("../img/notice_icon.png") no-repeat 0 2px/21px 21px;
   width: 27px;
   height: 21px;
   display: inline-block;
@@ -377,7 +377,7 @@ div.btn {
 #deps02 .table_area .joinus {
   padding: 28px 26px;
   width: 50%;
-  background: url("/img/join_bg.jpg") no-repeat center/cover;
+  background: url("../img/join_bg.jpg") no-repeat center/cover;
 }
 #deps02 .table_area .joinus h3 {
   font-weight: 500;
@@ -437,9 +437,9 @@ div.btn {
   height: 22px;
   right: 0;
   top: 0;
-  background-image: url("/img/rain01.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain01.png"); 
   background-size: 5px 22px;
-  animation: raindrop 1s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 1s linear infinite; 
 }
 #deps03 .box .img_box .icon02 {
   position: absolute;
@@ -447,27 +447,27 @@ div.btn {
   height: 22px;
   right: 30%;
   top: 0;
-  background-image: url("/img/rain02.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain02.png"); 
   background-size: 5px 22px;
-  animation: raindrop 2s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 2s linear infinite; 
 }
 #deps03 .box .img_box .icon03 {
   position: absolute;
   width: 5px;
   height: 22px;
   right: 65%;
-  background-image: url("/img/rain03.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain03.png"); 
   background-size: 5px 22px;
-  animation: raindrop 3s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 3s linear infinite;
 }
 #deps03 .box .img_box .icon04 {
   position: absolute;
   width: 5px;
   height: 22px;
   right: 20%;
-  background-image: url("/img/rain04.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain04.png"); 
   background-size: 5px 22px;
-  animation: raindrop 4s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 4s linear infinite; 
 }
 #deps03 .box .img_box .icon05 {
   position: absolute;
@@ -475,9 +475,9 @@ div.btn {
   height: 22px;
   right: 30%;
   top: 20%;
-  background-image: url("/img/rain05.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain05.png");
   background-size: 5px 22px;
-  animation: raindrop 4s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 4s linear infinite; 
 }
 #deps03 .box .img_box .icon06 {
   position: absolute;
@@ -485,9 +485,9 @@ div.btn {
   height: 22px;
   left: 0%;
   top: 0%;
-  background-image: url("/img/rain01.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain01.png"); 
   background-size: 5px 22px;
-  animation: raindrop 2s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 2s linear infinite; 
 }
 #deps03 .box .img_box .icon07 {
   position: absolute;
@@ -495,9 +495,9 @@ div.btn {
   height: 22px;
   left: 20%;
   top: 30%;
-  background-image: url("/img/rain02.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain02.png"); 
   background-size: 5px 22px;
-  animation: raindrop 2s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 2s linear infinite; 
 }
 #deps03 .box .img_box .icon08 {
   position: absolute;
@@ -505,9 +505,9 @@ div.btn {
   height: 22px;
   left: 50%;
   top: 0%;
-  background-image: url("/img/rain03.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain03.png"); 
   background-size: 5px 22px;
-  animation: raindrop 2s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 2s linear infinite; 
 }
 #deps03 .box .img_box .icon09 {
   position: absolute;
@@ -515,9 +515,9 @@ div.btn {
   height: 22px;
   left: 25%;
   top: 30%;
-  background-image: url("/img/rain04.png"); /* 원하는 아이콘 이미지 경로로 바꾸세요 */
+  background-image: url("../img/rain04.png");
   background-size: 5px 22px;
-  animation: raindrop 2s linear infinite; /* 애니메이션 설정 */
+  animation: raindrop 2s linear infinite; 
 }
 @keyframes raindrop {
   0% {
@@ -565,7 +565,7 @@ div.btn {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("/img/arrow_icon.png") no-repeat;
+  background: url("../img/arrow_icon.png") no-repeat;
   transition: 0.3s ease-in-out;
 }
 #deps04 .news_letter .txt {
@@ -608,28 +608,28 @@ div.btn {
   background: #009CAC;
 }
 #deps04 .catebox .b01 i {
-  background: url("/img/d01_icon.png") no-repeat center/65px 52px;
+  background: url("../img/d01_icon.png") no-repeat center/65px 52px;
   width: 65px;
   height: 53px;
   display: block;
   margin: 0 auto;
 }
 #deps04 .catebox .b02 i {
-  background: url("/img/d02_icon.png") no-repeat center/50px 53px;
+  background: url("../img/d02_icon.png") no-repeat center/50px 53px;
   width: 50px;
   height: 53px;
   display: block;
   margin: 0 auto;
 }
 #deps04 .catebox .b03 i {
-  background: url("/img/d03_icon.png") no-repeat center/45px 45px;
+  background: url("../img/d03_icon.png") no-repeat center/45px 45px;
   width: 45px;
   height: 53px;
   display: block;
   margin: 0 auto;
 }
 #deps04 .catebox .b04 i {
-  background: url("/img/d04_icon.png") no-repeat center/43px 43px;
+  background: url("../img/d04_icon.png") no-repeat center/43px 43px;
   width: 43px;
   height: 53px;
   display: block;
@@ -659,10 +659,10 @@ div.btn {
   height: 550px;
 }
 #deps05 li:nth-of-type(1) {
-  background: url("/img/deps04_img01.jpg") no-repeat center/cover;
+  background: url("../img/deps04_img01.jpg") no-repeat center/cover;
 }
 #deps05 li:nth-of-type(2) {
-  background: url("/img/deps04_img02.jpg") no-repeat center/cover;
+  background: url("../img/deps04_img02.jpg") no-repeat center/cover;
 }
 #deps05 li:nth-of-type(2):hover .txt {
   color: #fff;
@@ -912,7 +912,7 @@ div.btn {
   width: 50%;
 }
 #deps08 ul li.d01 {
-  background: url("/img/desp08_img01.jpg") no-repeat center/cover;
+  background: url("../img/desp08_img01.jpg") no-repeat center/cover;
   text-align: center;
   padding: 0 10px;
   height: 335px;
