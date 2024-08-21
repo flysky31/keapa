@@ -2,20 +2,21 @@
 $(document).ready(function() {
 
     
-    let listArray = ["01","02","03"];
+    let listArray = ["01","02","03","04","05"];
     let swiper = new Swiper('.swiper-container', {
       // Optional parameters
             loop: true,
             autoplayDisableOnInteraction: false,
             slidesPerView: 1,        
-            autoHeight: true,
-             autoplay: {
-                 delay: 3000,//animation과 시간 맞춰줘야함
-         }, 
+            //autoHeight: true,
+            //   autoplay: {
+            //       delay: 5000,//animation과 시간 맞춰줘야함
+            //  }, 
             effect: 'fade',
             fadeEffect: {
-                crossFade: true
+                fade: true
             },
+            speed:2000,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: 'true',
@@ -26,8 +27,8 @@ $(document).ready(function() {
             
             },
        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#deps02 .swiper-button-next', 
+        prevEl: '#deps02 .swiper-button-prev', 
       },
       
     })
@@ -188,20 +189,20 @@ let swiper1 = new Swiper(".mySwiper", {
 
 
    // 이미지 높이를 디바이스 높이에 맞게 조절하는 함수
-function resizeImageToScreenHeight() {
-    var screenHeight = $(window).height();
-    $('#deps01').height(screenHeight);
-}
+// function resizeImageToScreenHeight() {
+//     var screenHeight = $(window).height();
+//     $('#deps01').height(screenHeight);
+// }
 
-// 페이지 로드 시 이미지 크기 조절
-$(document).ready(function() {
-    resizeImageToScreenHeight();
-});
+// // 페이지 로드 시 이미지 크기 조절
+// $(document).ready(function() {
+//     resizeImageToScreenHeight();
+// });
 
-// 창 크기가 변경될 때마다 이미지 크기 조절
-$(window).resize(function() {
-    resizeImageToScreenHeight();
-});
+// // 창 크기가 변경될 때마다 이미지 크기 조절
+// $(window).resize(function() {
+//     resizeImageToScreenHeight();
+// });
 
 
 
