@@ -469,8 +469,7 @@ body.menu--open #aside:after {
   line-height: 2;
 }
 #footer .address p.flex span {
-  line-height: 1;
-  display: inline-block;
+  display: flex;
 }
 #footer .address p.flex span small {
   float: left;
