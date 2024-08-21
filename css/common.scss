@@ -665,8 +665,7 @@ body{
             
           
             span{
-                line-height: 1;
-                display: inline-block;
+                display:flex;
                 small{
                     float: left;
                     font-size: 1rem;
