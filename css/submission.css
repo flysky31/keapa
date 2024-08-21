@@ -366,7 +366,7 @@
 }
 #submission01 .ethics_area input:checked + label:before {
   content: "";
-  background: url("/img/check_on.png") no-repeat center/22px 22px;
+  background: url("../img/check_on.png") no-repeat center/22px 22px;
 }
 #submission01 .ethics_area .textarea {
   border: 1px solid #707070;
