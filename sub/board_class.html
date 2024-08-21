@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국표현예술심리상담학회 - 수강신청</title>
+    <title>한국표현예술심리상담학회 - 수강신청확인</title>
     <link href="https://webfontworld.github.io/pretendard/Pretendard.css" rel="stylesheet">  
     <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/sub.css">
-    <link rel="stylesheet" href="../css/submission.css">
+    <link rel="stylesheet" href="../css/board.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
     <div class="expressive_wrap">
@@ -281,324 +282,170 @@
                     <h2 class="hidden">서브 비주얼</h2>
                     <article class="inner">
                         <div class="title">
-                            <h3 class="s_fix">수강신청</h3>
+                            <h3 class="s_fix">수강신청확인</h3>
                         </div>
                     </article>
                 </section>
                 <section id="sub_cate" class="section">
                     <div class="sub_inner">
                         <ul>
-                            <li class="home"><a href="../index.html" title="home"><img src="../img/home_icon.png" alt="home"></a></li>
+                            <li class="home"><a href="../index.html" title="home"><img src="/img/home_icon.png" alt="home"></a></li>
                             <li class="arrow"></li>
-                            <li><a href="../sub/board.html" class="s_default">교육신청</a></li>
+                                        <li><a href="../sub/course.html" class="s_default">교육신청</a></li>
                             <li class="arrow"></li>
-                            <li><a href="../sub/board.html" class="s_default">수강신청</a></li>
+                            <li><a href="../sub/board_class.html" class="s_default">수강신청확인</a></li>
                         </ul>
                     </div>
                 </section>
                 <section id="board_area">
                     <h2 class="hidden">게시판영역</h2>
                     <div class="sub_inner">
-                                
-                                
-                
-                <script>
-                    var initBody;
-                
-                    function beforePrint() {
-                        initBody = document.body.innerHTML;
-                        document.body.innerHTML = print_page.innerHTML;
-                    }
-                
-                    function afterPrint() {
-                        document.body.innerHTML = initBody;
-                    }
-                
-                    function pageprint() {
-                        /*
-                        window.onbeforeprint = beforePrint;
-                        window.onafterprint = afterPrint;
-                        window.print();
-                        */
-                        var initBody = document.body.innerHTML;
-                        window.onbeforeprint = function () {
-                            document.body.innerHTML = document.getElementById('printpoint').innerHTML;
-                        }
-                
-                        window.onafterprint = function () {
-                            document.body.innerHTML = initBody;
-                        }
-                        window.print();
-                
-                    }
-                
-                    function viewSUinfo_all(n) {
-                        var nurl = '/pop/print3_all.php?id=' + n;
-                        window.open(nurl, 'view_member', 'top=10,left=10,width=950,height=500,status=no,toolbars=no,scrollbars=yes');
-                    }
-                
-                
-                </script>
-                
-                <div class="board_top">
-                    <div class="left_box">
-                        <form name="fcategory" method="get" style="margin:0px;">
+                        <div class="board_top">
+                            <div class="left_box"> 
+                                <form name="fcategory" method="get" style="margin:0px;"></form>
+                            </div>
+                            <div class="right_box">
+                                <img src="http://keapa.tium.co.kr/img/icon_total.gif" align="absmiddle" border='0'>
+                                <span style="color:#888888; font-weight:bold; font-size: 11px;">Total 5,228</span>
+                                <a href="http://keapa.tium.co.kr/adm/board_form.php?w=u&amp;bo_table=02_06">
+                                    <img src="http://keapa.tium.co.kr/img/btn_admin.gif"border='0' title="관리자" align="absmiddle">
+                                </a>
+                            </div>
+                        </div>            
+                        <form name="fboardlist" id="fboardlist" action="" onsubmit="return fboardlist_submit(this);" method="post">                
+                            <input type="hidden" name="bo_table" value="02_06">
+                            <input type="hidden" name="sfl" value="">
+                            <input type="hidden" name="stx" value="">
+                            <input type="hidden" name="spt" value="">
+                            <input type="hidden" name="sca" value="">
+                            <input type="hidden" name="sst" value="wr_num, wr_reply">
+                            <input type="hidden" name="sod" value="">
+                            <input type="hidden" name="page" value="1">
+                            <input type='hidden' name='sw' value=''>
+            
+                            <div id='printpoint' class="printpoint">
+                                <div class="board_list">
+                                    <ul class="board_head">
+                                        <li class="deps00"><input onclick="if (this.checked) all_checked(true); else all_checked(false);" type=checkbox></li>                            <!-- <th>상태</th> -->
+                                        <li class="deps01">강좌구분</li>
+                                        <li class="deps02">강의일자</li>
+                                        <li class="deps03">강좌명</li>
+                                        <li class="deps04">강사</li>
+                                        <li class="deps05">시간</li>
+                                        <li class="deps06">취소</li>                
+                                    </ul>                                        
+                                    <ul class="list_area bg1">           
+                                        <li class="deps00 checkbox">
+                                            <input type="checkbox" name="chk_wr_id[]" value="5293"id="chk_wr_id_0">
+                                        </li>
+                                        <li class="deps01">특강</li>
+                                        <li class="deps02">2024.08.21.</li>
+                                        <li class="deps03 subject">
+                                            <b>연구방법론 1.  개념도 연구와 척도개발</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">남희경</li>
+                                        <li class="deps05 hit">
+                                            3</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href='' onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                                <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif"></a><br/>
+                                        </li>
+                                    </ul>                                            
+                                    <ul class="list_area bg0">
+                                        <li class="deps00 checkbox">
+                                            <input type="checkbox" name="chk_wr_id[]" value="5292"id="chk_wr_id_1">
+                                        </li>
+                                        <li class="deps01">특강</li>
+                                        <li class="deps02">2024.08.21.</li>
+                                        <li class="deps03 subject">
+                                            <b>연구방법론 1.  개념도 연구와 척도개발</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">남희경</li>
+                                        <li class="deps05 hit">
+                                            3</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href=''onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                                <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif"></a><br/>
+                                        </li>                
+                                    </ul>                                            
+                                    <ul class="list_area bg1">
+                                        <li class="deps00 checkbox">
+                                                <input type="checkbox" name="chk_wr_id[]" value="5291"
+                                                        id="chk_wr_id_2">
+                                        </li>
+                                        <li class="deps01">특강</li>
+                                        <li class="deps02">2024.08.21.</li>
+                                        <li class="deps03 subject">
+                                            <b>연구방법론 1.  개념도 연구와 척도개발</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">남희경</li>
+                                        <li class="deps05 hit">
+                                            3</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href=''onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                                <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif" ></a><br/>
+                                        </li>                
+                                    </ul>                                            
+                                    <ul class="list_area bg0">
+                                        <li class="deps00 checkbox">
+                                                <input type="checkbox" name="chk_wr_id[]" value="5290"
+                                                        id="chk_wr_id_3">
+                                        </li>
+                                        <li class="deps01">특강</li>
+                                        <li class="deps02">2024.08.21.</li>
+                                        <li class="deps03 subject">
+                                            <b>연구방법론 1.  개념도 연구와 척도개발</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">남희경</li>
+                                        <li class="deps05 hit">
+                                            3</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href=''onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                                <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif"accesskey='s'></a><br/>
+                                        </li>                
+                                    </ul>                                            
+                                    <ul class="list_area bg1">
+                                        <li class="deps00 checkbox">
+                                                <input type="checkbox" name="chk_wr_id[]" value="5289"
+                                                        id="chk_wr_id_4">
+                                        </li>
+                                        <li class="deps01">특강</li>
+                                        <li class="deps02">2024.08.21.</li>
+                                        <li class="deps03 subject">
+                                            <b>연구방법론 1.  개념도 연구와 척도개발</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">남희경</li>
+                                        <li class="deps05 hit">
+                                            3</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href=''onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                                <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif"></a><br/><!--//취소버튼 -> 눌렀을때 바로 취소되게-->
+
+                                        </li>
+                                    </ul>                                            
+                                    <ul class="list_area bg0">
+                                        <li class="deps00 checkbox">
+                                                <input type="checkbox" name="chk_wr_id[]" value="5288"
+                                                        id="chk_wr_id_5">
+                                        </li>
+                                        <li class="deps01">사례발표</li>
+                                        <li class="deps02">2024.08.11</li>
+                                        <li class="deps03 subject">
+                                            <b>가정폭력과 보호시설을 경험한 초등여아에 대한 개인 표현…</b>
+                                        </li>
+                                        <li class="deps04 name" style="text-align:center">전유례</li>
+                                        <li class="deps05 hit">
+                                            2</li>
+                                        <li class="deps06" style="text-align:center">
+                                            <a href=''onClick="if(confirm('취소 하시겠습니까?')){return true;}else{return false;}">
+                                            <img type=image src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register2/img/B_cancel.gif"></a><br/>
+                                        </li>                
+                                    </ul>                                            
+                                </div>
+                            </div>                                    
                         </form>
                     </div>
-                    <div class="right_box">
-                        <img src="http://keapa.tium.co.kr/img/icon_total.gif" align="absmiddle" border='0'>
-                        <span style="color:#888888; font-weight:bold; font-size: 11px;">Total 252</span>
-                        <a href="http://keapa.tium.co.kr/adm/board_form.php?w=u&amp;bo_table=02_05">
-                            <img src="http://keapa.tium.co.kr/img/btn_admin.gif" border='0' title="관리자" align="absmiddle">
-                        </a>    
-                    </div>
-                </div>
-
-                <form name="fboardlist" method="post">
-                    <input type='hidden' name='bo_table' value='02_05'>
-                    <input type='hidden' name='sfl' value=''>
-                    <input type='hidden' name='stx' value=''>
-                    <input type='hidden' name='spt' value=''>
-                    <input type='hidden' name='page' value='1'>
-                    <input type='hidden' name='ps_id' value='admin'>
-                    <input type='hidden' name='ps_name' value='최고관리자'>
-                    <input type='hidden' name='sw' value=''>
-                
-                    <div id="printpoint" class="printpoint">
-                        <div class="board_list">               
-                                
-                            <ul class="board_head">                  
-                                <li class="deps00"><input onclick="if (this.checked) all_checked(true); else all_checked(false);" type=checkbox></li>                
-                                <li class="deps01">상태</li>
-                                <li class="deps02">강좌구분</li>
-                                <li class="deps03">강의일자</li>
-                                <li class="deps04">강좌명</li>
-                                <li class="deps05">강사</li>
-                                <li class="deps06">신청기간</li>
-                                <li class="deps07">시간</li>
-                                <li class="deps08">선택</li>                
-                            </ul>                            
-                            <ul class="list_area bg1">
-                                <li class="deps00 checkbox"><input type="checkbox" name="chk_wr_id[]" value="315"></li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='on_icon'>신청중</p></li>
-                                <li class="deps02" style="text-align:center">특강</li>
-                                <li class="deps03">2024.08.21.</li>                
-                                <li class="deps04 subject">
-                                    <b><a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=315'>연구방법론 1.  개념도 연구와 척도개발</a>    
-                                    </nobr></b>                                    
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">남희경</li>
-                                <li class="deps06 datetime">2024-08-02~2024-08-21</li>
-                                <li class="deps07 hit">3</li>
-                                <li class="deps08">
-                                    <span class="form_p02" style="text-align:center">
-                                        <input type="radio" value="315" alt="신청"  />
-                                    </span>
-                                </li>                
-                            </ul>               
-                        
-                            <ul class="list_area bg0">
-                                <li class="deps00 checkbox">
-                                    <input type="checkbox" name="chk_wr_id[]" value="314">
-                                </li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='off_icon'>신청마감</p></li>
-                                <li class="deps02" style="text-align:center">사례발표</li>
-                                <li class="deps03">2024.08.11</li>                
-                                <li class="deps04 subject">
-                                    <b><a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=314'>
-                                        집단표현예술심리치료가 한부모가정 아동의 자기 표현과 사…</a></nobr>
-                                    </b>
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">김선주</li>
-                                <li class="deps06 datetime">2024-07-24~2024-08-09</li>
-                                <li class="deps07 hit">2</li>
-                                <li class="deps08">
-                                    <span class="form_p02" style="text-align:center">
-                                        <input type="radio" name="ps_uid" value="314" alt="신청" disabled />
-                                    </span>
-                                </li>
-                            </ul>                
-                        
-                            <ul class="list_area bg1">
-                                <li class="deps00 checkbox">
-                                    <input type="checkbox" name="chk_wr_id[]" value="313">
-                                </li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'>
-                                    <p class='off_icon'>신청마감</p>
-                                </li>
-                                <li class="deps02" style="text-align:center">사례발표</li>
-                                <li class="deps03">2024.08.11</li>                
-                                <li class="deps04 subject">
-                                    <b>  <a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=313'>가정폭력과 보호시설을 경험한 초등여아에 대한 개인 표현…</a>    </nobr></b>
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">전유례</li>
-                                <li class="deps06 datetime">2024-07-24~2024-08-09</li>
-                                <li class="deps07 hit">2</li>
-                                <li class="deps08"><span class="form_p02" style="text-align:center">
-                                    <input type="radio" name="ps_uid" value="313" alt="신청" disabled /></span>
-                                </li>
-                            </ul>                
-                        
-                            <ul class="list_area bg0">
-                                <li class="deps00 checkbox"><input type="checkbox" name="chk_wr_id[]" value="312"></li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='off_icon'>신청마감</p></li>
-                                <li class="deps02" style="text-align:center">사례발표</li>
-                                <li class="deps03">2024.07.14</li>                
-                                <li class="deps04 subject">
-                                    <b> <a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=312'>집단표현예술심리치료가 다문화가정 아동의 학교생활적응과 …</a>    </nobr></b>
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">강은아</li>
-                                <li class="deps06 datetime">2024-06-26~2024-07-12</li>
-                                <li class="deps07 hit">2</li>
-                                <li class="deps08"><span class="form_p02" style="text-align:center">
-                                    <input type="radio" name="ps_uid" value="312"  alt="신청" disabled /></span>
-                                </li>
-                            </ul>
-                                        
-                            <ul class="list_area bg1">
-                                <li class="deps00 checkbox"><input type="checkbox" name="chk_wr_id[]" value="311"></li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='off_icon'>신청마감</p></li>
-                                <li class="deps02" style="text-align:center">사례발표</li>
-                                <li class="deps03">2024.07.14</li>                
-                                <li class="deps04 subject">
-                                    <b><a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=311'>전시장 미술치료</a>    </nobr></b>
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">최미선</li>
-                                <li class="deps06 datetime">2024-06-26~2024-07-12</li>
-                                <li class="deps07 hit">2</li>
-                                <li class="deps08">
-                                    <span class="form_p02" style="text-align:center">
-                                        <input type="radio" name="ps_uid"  value="311" alt="신청" disabled />
-                                    </span>
-                                </li>
-                            </ul>               
-                        
-                            <ul class="list_area bg0">
-                                <li class="deps00 checkbox"><input type="checkbox" name="chk_wr_id[]" value="310"></li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='off_icon'>신청마감</p></li>
-                                <li class="deps02" style="text-align:center">특강</li>
-                                <li class="deps03">2024.06.23.</li>                
-                                <li class="deps04 subject">
-                                    <b>  <a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=310'>이마고 부부상담Ⅱ 잃어버린 자아를 찾아서</a>    </nobr></b>
-                                </li>                
-                                <li class="deps05 name" style="text-align:center">오소정</li>
-                                <li class="deps06 datetime">2024-06-11~2024-06-23</li>
-                                <li class="deps07 hit">3</li>
-                                <li class="deps08"><span class="form_p02" style="text-align:center">
-                                    <input type="radio" name="ps_uid" value="310" alt="신청" disabled /></span>
-                                </li>
-                            </ul>                
-                        
-                            <ul class="list_area bg1">
-                                <li class="deps00 checkbox">
-                                    <input type="checkbox" name="chk_wr_id[]" value="308">
-                                </li>                    
-                                <li class="deps01" style='text-align:center; font-size:12px; color:#ff0060;'><p class='off_icon'>신청마감</p></li>
-                                <li class="deps02" style="text-align:center">특강</li>
-                                <li class="deps03">2024.05.26</li>                
-                                <li class="deps04 subject">
-                                    <b>  <a href='http://keapa.tium.co.kr/bbs/board.php?bo_table=02_05&amp;wr_id=308'>&lt;학교미술치료특강&gt; 2.정서행동문제에 대한 학교미술치료…</a>    </nobr></b>
-                                </li>
-                                <li class="deps05 name" style="text-align:center">류진아</li>
-                                <li class="deps06 datetime">2024-05-14~2024-05-24</li>
-                                <li class="deps07 hit">3</li>
-                                <li class="deps08"><span class="form_p02" style="text-align:center">
-                                    <input type="radio" name="ps_uid" value="308" alt="신청" disabled /></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>                
-                
-                    <div class="form_area">
-                        <ul>
-                            <li>
-                                <b>이름 : </b> <strong>최고관리자</strong>                
-                            </li>
-                            <li>
-                                <b>연락처 : </b> <input type="text" name="ps_phone" value="1111111">
-                            </li>
-                            <li>
-                                <b>이메일 : </b> <input type="text" name="ps_email" value="sdsdf">
-                            </li>
-                        </ul>
-                        <div class="btn">
-                            <a href="#!" id="btn_submit" accesskey='s'>수강 신청하기</a>
-                        </div>
-                    </div>
-                </form>
-
-                <div class="board_button">
-                    <div style="float:left;">
-                        <a href="javascript:select_delete();">
-                            <img src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register/img/btn_select_delete.gif" align="absmiddle" border='0'>
-                        </a>
-                        <a href="javascript:select_copy('copy');">
-                            <img src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register/img/btn_select_copy.gif"  align="absmiddle" border='0'>
-                        </a>
-                        <a href="javascript:select_copy('move');">
-                            <img src="http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register/img/btn_select_move.gif" align="absmiddle" border='0'>
-                        </a>
-                    </div>
-                
-                    <div style="float:right;" class="write_btn">
-                        <a href="http://keapa.tium.co.kr/bbs/write.php?bo_table=02_05">글쓰기</a>     
-                    </div>
-                </div>
-                
-                <!-- 페이지 -->
-                <div class="board_page">
-                    <nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
-                        <a href="#none" class="pg_page">2<span class="sound_only">페이지</span></a>
-                        <a href="#none" class="pg_page">3<span class="sound_only">페이지</span></a>
-                        <a href="#none" class="pg_page">4<span class="sound_only">페이지</span></a>
-                        <a href="#none" class="pg_page">5<span class="sound_only">페이지</span></a>
-                        <a href="#none" class="pg_page pg_next"><img src='http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register/img/page_next.gif' border='0' align='absmiddle' title='다음'></a>
-                        <a href="#none" class="pg_page pg_end"><img src='http://keapa.tium.co.kr/theme/grape5.5/mobile/skin/board/register/img/page_end.gif' border='0' align='absmiddle' title='맨끝'></a>
-                        </span>
-                    </nav>    
-                </div>
-
-                
-                <script>
-                    $("#btn_submit").click(function () {
-                        var ps_uid = $(':radio[name="ps_uid"]:checked').val();
-                        var ps_id = $.trim($("input[name=ps_id]").val());
-                        var ps_name = $.trim($("input[name=ps_name]").val());
-                        var ps_phone = $.trim($("input[name=ps_phone]").val());
-                        var ps_email = $.trim($("input[name=ps_email]").val());
-                
-                        if (ps_id == '') {
-                            alert('로그인 후 신청해 주세요.');
-                            return;
-                        }
-                
-                        if (ps_uid == '' || $.type(ps_uid) == 'undefined') {
-                            alert('강좌를 선택해 주세요.');
-                            return;
-                        }
-                
-                        if (ps_phone == '') {
-                            alert('연락처를 입력해 주세요.');
-                            return;
-                        }
-                
-                        if (ps_email == '') {
-                            alert('이메일을 입력해 주세요.');
-                            return;
-                        }
-                
-                        var formData = new FormData();
-                        formData.append("smd", "w");
-                        formData.append("ps_id", ps_id);
-                        formData.append("ps_uid", ps_uid);
-                        formData.append("ps_name", ps_name);
-                        formData.append("ps_phone", ps_phone);
-                        formData.append("ps_email", ps_email);
-        
-                
-                    });
-                
-                </script>    
+                </section>                            
             </main>
             <footer id="footer">
                 <div class="spon inner">
@@ -712,7 +559,6 @@
         </div>
     </div>        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="../js/nav.js"></script>
 </body>
