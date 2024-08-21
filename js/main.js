@@ -9,9 +9,9 @@ $(document).ready(function() {
             autoplayDisableOnInteraction: false,
             slidesPerView: 1,        
             //autoHeight: true,
-            //   autoplay: {
-            //       delay: 5000,//animation과 시간 맞춰줘야함
-            //  }, 
+               autoplay: {
+                   delay: 5000,
+              }, 
             effect: 'fade',
             fadeEffect: {
                 fade: true
