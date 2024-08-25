@@ -1023,10 +1023,7 @@
         &.active{
             display:block;
         }
-        tr.flex{
-            display:flex;
-            flex-direction: column;
-        }
+      
     }
     .sub_inner{
         margin: 100px auto;
@@ -1414,6 +1411,7 @@
         height: 250px;
     }
 
+    
     #board_area {
         .sub_inner{
             margin: 50px auto;
@@ -1425,6 +1423,13 @@
                 a{
                     padding: 12px 0;
                 }
+            }
+        }
+        .tab-pane{
+   
+            tr.flex{
+                display:flex;
+                flex-direction: column;
             }
         }
         .table_wrap {
