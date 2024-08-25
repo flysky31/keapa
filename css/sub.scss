@@ -1430,6 +1430,9 @@
             tr.flex{
                 display:flex;
                 flex-direction: column;
+                td:first-child{
+                    width:100%!important;
+                }
             }
         }
         .table_wrap {
