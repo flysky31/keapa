@@ -276,14 +276,14 @@ div.btn {
     width: 100%;
   }
 }
+
 #deps02 {
   position: absolute;
   top: 0;
   right: 50%;
-  width: 90%;
+  width: 80%;
   height: 100%;
   z-index: 1;
-  max-width: 1700px;
   transform: translate(50%);
   display: flex;
   align-items: center;
@@ -291,6 +291,50 @@ div.btn {
 }
 #deps02 .table_area {
   width: 50%;
+}
+#deps02 .table_area .arr {
+  position: absolute;
+  right: 0;
+}
+#deps02 .table_area .arr .line {
+  width: 2px;
+  height: 100px;
+  background: #707070;
+}
+#deps02 .table_area .arr .swiper-button-prev {
+  left: auto;
+  right: 34px;
+  width: 35px;
+  height: 35px;
+  top: 25px;
+  background: #fff;
+}
+#deps02 .table_area .arr .swiper-button-prev:after {
+  font-size: 23px;
+  color: #707070;
+}
+#deps02 .table_area .arr .swiper-button-next {
+  left: auto;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  top: 25px;
+  background: #fff;
+}
+#deps02 .table_area .arr .swiper-button-next:before {
+  transform: translate(0, -50%);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 23px;
+  background: #ddd;
+}
+#deps02 .table_area .arr .swiper-button-next:after {
+  font-size: 23px;
+  color: #707070;
 }
 #deps02 .table_area .notice_wrap {
   width: 50%;
@@ -338,6 +382,9 @@ div.btn {
   -webkit-box-orient: vertical;
   width: 100%;
 }
+#deps02 .table_area .notice_wrap ul li a:hover b {
+  transform: rotate(180deg);
+}
 #deps02 .table_area .notice_wrap ul li a span {
   display: block;
   width: 100%;
@@ -349,10 +396,12 @@ div.btn {
 }
 #deps02 .table_area .notice_wrap ul li a b {
   width: 30px;
+  min-width: 30px;
   height: 30px;
   background: #F8F8F8;
   border-radius: 100%;
   position: relative;
+  transition: transform 500ms ease-in-out;
 }
 #deps02 .table_area .notice_wrap ul li a b::before {
   content: "";
@@ -364,6 +413,7 @@ div.btn {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 500ms ease-in-out;
 }
 #deps02 .table_area .notice_wrap ul li a b::after {
   content: "";
@@ -375,6 +425,7 @@ div.btn {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 500ms ease-in-out;
 }
 #deps02 .table_area .notice_wrap .date {
   font-size: 0.75rem;
@@ -397,9 +448,10 @@ div.btn {
 #deps02 .table_area .bannerbox .togo_btn a {
   font-size: 0.875rem;
   background: #fff;
-  display: inline-block;
   padding: 5px 20px;
   border-radius: 100px;
+  margin: 0 10px 0 0;
+  display: flex;
 }
 #deps02 .table_area .bannerbox .togo_btn a i {
   margin: 0 0 0 15px;
@@ -407,16 +459,27 @@ div.btn {
 #deps02 .table_area .togo {
   background: #8DCFCF;
   width: 50%;
-  padding: 25px;
+  padding: 28px 25px;
   color: white;
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #deps02 .table_area .togo p {
   margin: 5px 0 0;
+  display: none;
 }
 #deps02 .table_area .joinus {
   padding: 28px 26px;
   width: 50%;
+  height: 208px;
   background: url("../img/join_bg.jpg") no-repeat center/cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 #deps02 .table_area .joinus h3 {
   font-weight: 500;
@@ -430,6 +493,7 @@ div.btn {
   font-size: 0.875rem;
   color: #fff;
   margin: 5px 0 0;
+  display: none;
 }
 
 #deps03 {
@@ -1032,6 +1096,14 @@ div.btn {
   #deps01 .swiper-slide .txt strong span {
     font-size: 1.5rem;
   }
+  #deps02 .table_area .togo {
+    position: relative;
+  }
+  #deps02 .table_area .togo figure {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+  }
   #deps03 .box {
     margin-left: 8.5%;
     margin-right: 8.5%;
@@ -1084,7 +1156,7 @@ div.btn {
     bottom: 20%;
   }
 
-  #deps02 {
+   #deps02 {
     transform: translate(0);
     position: relative;
     top: 0;
@@ -1093,8 +1165,10 @@ div.btn {
     position: relative;
   }
   #deps02 .table_area {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+  }
+  #deps02 .table_area .arr {
+    display: none;
   }
   #deps02 .table_area .notice_wrap {
     width: 100%;
@@ -1146,6 +1220,9 @@ div.btn {
 }
 /* ======================= 1024 =============================*/
 @media (max-width: 1024px) {
+  #deps02 {
+    margin: 70px auto 100px;
+  }
   #deps03 {
     width: 90%;
     margin: 0 auto;
@@ -1238,9 +1315,6 @@ div.btn {
 /* ======================= 991 =============================*/
 /* ======================= 768 =============================*/
 @media (max-width: 768px) {
-  #deps02 {
-    margin: 50px auto;
-  }
   #deps02 .table_area .togo {
     width: auto;
   }
@@ -1359,6 +1433,15 @@ div.btn {
   }
   #deps01 .swiper-slide .txt p br {
     display: none;
+  }
+  #deps02 .table_area .notice_wrap .title {
+    padding: 20px 30px;
+  }
+  #deps02 .table_area .notice_wrap .title .search_icon img {
+    width: 22px;
+  }
+  #deps02 .table_area .notice_wrap ul li a span {
+    font-size: 1rem;
   }
   #deps04 .container {
     padding: 50px 0;
