@@ -297,54 +297,226 @@
                 </section>
                 <section id="board_area">
                     <h2 class="hidden">게시판영역</h2>
-                    <div class="sub_inner">
+                    <div class="sub_inner">                                                                               
                         <div class="boxy-warp sub-contents">
                             <div class="r-sub-con">
-                                <style>span.w_subject{width:505px;}</style>
-                                <div id="bo_list" style="width:100%">
-                                    <div id="bo_btn_top">
+                                <style>
+                                span.w_subject{width:505px;}
+                                </style>
+
+                                   <div id="bo_list" style="width:100%">
+                                        <div id="bo_btn_top">
                                             <div id="bo_list_total">
-                                                    <span>Total 0건</span>
+                                                <span>Total 200건</span>
                                                     1 페이지
                                             </div>
-                                    </div>
-                                    <form name="fboardlist" id="fboardlist" action="#" onsubmit="return fboardlist_submit(this);" method="post">
-                                        <input type="hidden" name="bo_table" value="academic">
-                                        <input type="hidden" name="sfl" value="">
-                                        <input type="hidden" name="stx" value="">
-                                        <input type="hidden" name="spt" value="">
-                                        <input type="hidden" name="sca" value="">
-                                        <input type="hidden" name="sst" value="wr_num, wr_reply">
-                                        <input type="hidden" name="sod" value="">
-                                        <input type="hidden" name="page" value="1">
-                                        <input type="hidden" name="sw" value="">
-                                        <div class="bo_list_head">
-                                            <ul>
-                                                <li>
-                                                    <span class="s-check">
+                                        </div>                        
+                                        <form name="fboardlist" id="fboardlist" action="sub/job.html" onsubmit="return fboardlist_submit(this);" method="post">
+                                            <input type="hidden" name="bo_table" value="05_02">
+                                            <input type="hidden" name="sfl" value="">
+                                            <input type="hidden" name="stx" value="">
+                                            <input type="hidden" name="spt" value="">
+                                            <input type="hidden" name="sca" value="">
+                                            <input type="hidden" name="sst" value="wr_num, wr_reply">
+                                            <input type="hidden" name="sod" value="">
+                                            <input type="hidden" name="page" value="1">
+                                            <input type="hidden" name="sw" value="">
+                            
+                                            <div class="bo_list_head">
+                                                <ul>
+                                                    <li>
+                                                        <span class="s-check">
                                                             <input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);">
-                                                    </span>
-                                                    <span class="s-number">번호</span>
-                                                    <span class="s-name">제목</span>
-                                                    <span class="s-user">글쓴이</span>
-                                                    <span class="s-view"><a href="">조회 <i class="fa fa-sort" aria-hidden="true"></i></a></span>
-                                                    <span class="s-day"><a href="">날짜  <i class="fa fa-sort" aria-hidden="true"></i></a></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="bo_list">
-                                            <ul>
-                                                <li style="text-align:center;">게시물이 없습니다.</li>						
-                                            </ul>
-                                        </div>
-                                    </form>			
-                                    <fieldset id="bo_sch">
-                                        <legend>게시물 검색</legend>
-                                        <form name="fsearch" method="get">
-                                        <input type="hidden" name="bo_table" value="academic">
-                                        <input type="hidden" name="sca" value="">
-                                        <input type="hidden" name="sop" value="and">
-                                        <select name="sfl" id="sfl">
+                                                        </span>
+                                                        <span class="s-number">번호</span>
+                                                        <span class="s-name">제목</span>
+                                                        <span class="s-user">글쓴이</span>
+                                                        <span class="s-view"><a href="">조회 <i class="fa fa-sort" aria-hidden="true"></i></a></span>
+                                                        <span class="s-day"><a href="">날짜  <i class="fa fa-sort" aria-hidden="true"></i></a></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="bo_list">
+                                                <ul>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="148" id="chk_wr_id_0"/>
+                                                        </span>
+                                                            <span class="s-number mobile_none">
+                                                            <div class="mobile_none">141</div>								
+                                                        </span>
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    2024년 명지대학교 통합치료대학원 예술심리치료학과 신…</a>                                                                                                                                                      
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">정조하</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 3</span>
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-25</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="147" id="chk_wr_id_1"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">140</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    [명우임상심리연구소] KEIF성향검사 기초 및 보수과정…                                                                </a>
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">이연하</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 2</span>
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-24</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="146" id="chk_wr_id_2"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">139</div>		
+                                                        </span>
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    집단 슈퍼비젼 참여자 모집. 선착순 5명.
+                                                                </a>            
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                     
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">이재하</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 29</span>
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-20</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="145" id="chk_wr_id_3"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">138</div>								
+                                                        </span>
+                            
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                   예술치료사의 미술재료수업 - 3기를 모집합니다. (마음…										 
+                                                                </a>              
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                  
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">김최하</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 37</span>                                                                                                                       
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-17</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="143" id="chk_wr_id_4"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">137</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    [한국예술치료학회 특별 심포지엄] 전국민 마음건강과 예…                                                                                                   
+                                                                </a>               
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                 
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">김원규</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 45</span>                                                                                                                        
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-15</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="142" id="chk_wr_id_5"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">136</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    ▶ [박사논문 연구참여자 모집] 상담자(대상)분들의 참…									 
+                                                                </a>          
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                     
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">이성원</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 38</span>                                                                                                                        
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-15</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="140" id="chk_wr_id_6"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">135</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    집단슈퍼비전 참여자 모집/학회임상시간인정/(선책순 8명…									 
+                                                                </a>           
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                    
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">손저재</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 50</span>                                                                                                                        
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-04</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="139" id="chk_wr_id_7"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">134</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    KSCP-대상관계 7월 특강											 
+                                                                </a>          
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                     
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">구벙준</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 45</span>                                                                                                                        
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-03</span>
+                                                    </li>
+                                                    <li class="">
+                                                        <span class="s-check">
+                                                            <input class="mobile_none"  type="checkbox" name="chk_wr_id[]" value="137" id="chk_wr_id_8"/>
+                                                        </span>
+                                                        <span class="s-number mobile_none">
+                                                            <div class="mobile_none">133</div>								
+                                                        </span>                        
+                                                        <span class="s-name" style="padding-left:0px">
+                                                            <div class="bo_tit">                                                                                                                
+                                                                <a href="">
+                                                                    2024년 한국에서 열리는 IFS심리치료 레벨1, 레벨…											 
+                                                                </a>        
+                                                                <i class="fa fa-heart" aria-hidden="true"></i>                                                                                                                                                        
+                                                            </div>                        
+                                                        </span>
+                                                        <span class="s-user"><span class="sv_guest">노벙석</span></span>
+                                                        <span class="s-view"><nobr class="pc_none"></nobr> 45</span>                                                                                                                        
+                                                        <span class="s-day"><nobr class="pc_none"></nobr> 08-02</span>
+                                                    </li>                                                                                                                                        
+                                                </ul>
+                                            </div>                       
+                                        </form>                                         
+                                        <fieldset id="bo_sch">
+                                            <legend>게시물 검색</legend>                    
+                                            <form name="fsearch" method="get">
+                                            <input type="hidden" name="bo_table" value="05_02">
+                                            <input type="hidden" name="sca" value="">
+                                            <input type="hidden" name="sop" value="and">
+                                            <select name="sfl" id="sfl">
                                                 <option value="wr_subject">제목</option>
                                                 <option value="wr_content">내용</option>
                                                 <option value="wr_subject||wr_content">제목+내용</option>
@@ -352,12 +524,12 @@
                                                 <option value="mb_id,0">회원아이디(코)</option>
                                                 <option value="wr_name,1">글쓴이</option>
                                                 <option value="wr_name,0">글쓴이(코)</option>
-                                        </select>
-                                        <input type="text" name="stx" value="" required="" id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
-                                        <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                        </form>
-                                    </fieldset>
-                                </div>
+                                            </select>
+                                            <input type="text" name="stx" value="" required id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
+                                            <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                            </form>
+                                        </fieldset>
+                                    </div>
                             </div>
                         </div>    
                     </div>
