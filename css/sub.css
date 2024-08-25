@@ -925,6 +925,10 @@
 #board_area .tab-pane.active{
   display:block;
 }
+#board_area .tab-pane tr.flex{
+  display:flex;
+  flex-direction: column;
+}
 #board_area .sub_inner {
   margin: 100px auto;
 }
