@@ -1203,7 +1203,10 @@
   #board_area .tab-pane tr.flex{
   display:flex;
   flex-direction: column;
-}
+  }
+  #board_area .tab-pane tr.flex td:first-child{
+    width:100%!important;
+  }
   #board_area .tab_area {
     margin: 30px 0;
     flex-wrap: wrap;
