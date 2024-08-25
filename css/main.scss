@@ -322,10 +322,9 @@ div.btn{
     position: absolute;
     top: 0;
     right: 50%;
-    width: 90%;
+    width: 80%;
     height: 100%;
     z-index: 1;
-    max-width: 1700px;
     transform: translate(50%);
     display: flex;
     align-items: center;
@@ -333,6 +332,53 @@ div.btn{
     .table_area{
 
         width: 50%;
+        .arr{
+            
+            position: absolute;
+            right: 0;
+           
+            .line{
+                width: 2px;
+                height: 100px;
+                background: #707070;
+            }
+            .swiper-button-prev{
+                left: auto;
+                right: 34px;
+                width: 35px;
+                height: 35px;
+                top: 25px;
+                background: #fff;
+                &:after{
+                    font-size: 23px;
+                     color: #707070;
+                }
+            }
+      
+            .swiper-button-next{
+                left: auto;
+                right: 0;
+                width: 35px;
+                height: 35px;
+                top: 25px;
+                background: #fff;
+                &:before{
+                    transform: translate(0,-50%);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 2px;
+                    height: 23px;
+                    background: #ddd;
+                }
+                &:after{
+                    font-size: 23px;
+                     color: #707070;
+                }
+            }
+        }
         .notice_wrap{
             width: 50%;
             float: right;
@@ -380,7 +426,11 @@ div.btn{
 
                     }
                     a{
-                        
+                        &:hover{
+                            b{
+                                transform: rotate(180deg);
+                            }
+                        }
                         span{
                             display: block;
                             width: 100%;
@@ -392,10 +442,12 @@ div.btn{
                         }
                         b{
                             width: 30px;
+                            min-width: 30px;
                             height: 30px;
                             background: #F8F8F8;
                             border-radius: 100%;
                             position: relative;
+                            transition: transform 500ms ease-in-out;
                             &::before{
                                 content:"";
                                 display: block;
@@ -406,6 +458,7 @@ div.btn{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%,-50%);
+                                transition: transform 500ms ease-in-out;
                             }
                             &::after{
                                 content:"";
@@ -417,6 +470,7 @@ div.btn{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%,-50%);
+                                transition: transform 500ms ease-in-out;
                             }
                         }
                     }
@@ -442,9 +496,11 @@ div.btn{
                 a{
                     font-size: 0.875rem;
                     background: #fff;
-                    display: inline-block;
+         
                     padding: 5px 20px;
                     border-radius: 100px;
+                    margin: 0 10px 0 0;
+                    display: flex;
                     i{
                         margin: 0 0 0 15px;
                     }
@@ -454,17 +510,28 @@ div.btn{
         .togo{
             background: #8DCFCF;
             width: 50%;
-            padding: 25px;
+            padding: 28px 25px;
             color: #ffff;
+            height: 208px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             p{
                 
                 margin: 5px 0 0;
+                display:none;
             }
         }
         .joinus{
             padding: 28px 26px;
             width: 50%;
+            height: 208px;
             background: url("../img/join_bg.jpg")no-repeat center/cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: column;
             h3{
                 font-weight: 500;
                 b{
@@ -477,6 +544,7 @@ div.btn{
                 font-size: 0.875rem;
                 color: #fff;
                 margin: 5px 0 0;
+                display: none;
             }
         }
     }
@@ -1172,6 +1240,19 @@ div.btn{
             }
         }
     }
+   #deps02{
+        .table_area{
+            .togo{
+                position: relative;
+                figure{
+                    position: absolute;
+                    top: 30px;
+                    right: 25px;
+                }
+            }
+        }
+
+    }
     #deps03{
         .box{
             margin-left: 8.5%;
@@ -1265,8 +1346,11 @@ div.btn{
         margin: 100px auto;
         position: relative;
         .table_area{
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
+   
+            .arr{
+                display: none;
+            }
             .notice_wrap{
                 width: 100%;
                 ul{
@@ -1370,6 +1454,9 @@ div.btn{
 
 /* ======================= 1024 =============================*/
 @include breakpoint_tablet_1024{
+    #deps02{
+        margin: 70px auto 100px;
+    }
     #deps03 {
         width: 90%;
         margin: 0 auto;
@@ -1494,8 +1581,7 @@ div.btn{
 
 /* ======================= 768 =============================*/
 @include breakpoint_tablet_768{
-    #deps02 {
-        margin: 50px auto;
+    #deps02 {        
         .table_area {
             .togo{
                 width: auto;
@@ -1692,6 +1778,29 @@ div.btn{
         }
      
     }
+    #deps02 {
+        .table_area {
+            .notice_wrap{
+                .title{
+                    padding: 20px 30px;
+                    .search_icon{
+                        img{
+                            width: 22px;
+                        }
+                    }
+                }
+                ul {
+                    li{
+                        a{
+                            span{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     #deps04 {
         .container{
             padding: 50px 0;
@@ -1709,6 +1818,7 @@ div.btn{
     #deps02 {
         .table_area{
             width: auto;
+            
         }
     }
     #deps03{
