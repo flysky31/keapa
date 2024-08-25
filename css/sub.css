@@ -919,7 +919,12 @@
 #location02 .root_daum_roughmap .wrap_map {
   height: 500px;
 }
-
+#board_area .tab-pane{
+  display:none;
+}
+#board_area .tab-pane.active{
+  display:block;
+}
 #board_area .sub_inner {
   margin: 100px auto;
 }
