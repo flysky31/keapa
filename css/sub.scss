@@ -1018,6 +1018,12 @@
 }
 
 #board_area{
+    .tab-pane{
+        display:none;
+        &.active{
+            display:block;
+        }
+    }
     .sub_inner{
         margin: 100px auto;
         .top_img{
