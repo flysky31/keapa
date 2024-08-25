@@ -1023,6 +1023,10 @@
         &.active{
             display:block;
         }
+        tr.flex{
+            display:flex;
+            flex-direction: column;
+        }
     }
     .sub_inner{
         margin: 100px auto;
